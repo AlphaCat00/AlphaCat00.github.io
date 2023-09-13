@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Zerui Guo
+subtitle: 
 
 profile:
   align: right
