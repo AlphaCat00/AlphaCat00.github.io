@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://alphacat00.github.io/sitemap.xml
+Sitemap: https://AlphaCat00.github.io/sitemap.xml
