@@ -19,6 +19,6 @@ social: false  # includes social icons at the bottom of the page
 
 Hi there! I am Zerui Guo, a first-year PhD student at [the University of Wisconsin-Madison](https://www.cs.wisc.edu/) advised by [Prof. Ming Liu](https://pages.cs.wisc.edu/~mgliu/index.html).  Previously, I obtained my master's degree from Beihang University, and my bachelor's degree from Beijing University of Posts and Telecommunications.
 
-My research goal is to bridge the gap between emerging networking hardware and system software. Currently, I mainly focus on smartNIC-assisted applications, such as KV stores, smartNIC models, and game streaming, as well as memory fabrics (CXL.mem).
+My research goal is to bridge the gap between emerging hardware and networked system software. Currently, I mainly focus on smartNIC-assisted computing, such as KV stores, smartNIC models, and game streaming, as well as memory fabrics (CXL.mem).
 
 **I am actively looking for a research internship for the next summer.**
