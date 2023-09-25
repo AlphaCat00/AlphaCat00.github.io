@@ -12,6 +12,7 @@
                
                This paper presents the LogNIC model that systematically analyzes the performance characteristics of a SmartNIC-offloaded program. Unlike conventional execution flow-based modeling, LogNIC employs a packet-centric approach that examines SmartNIC execution based on how packets traverse heterogeneous computing domains, on-/off-chip interconnects, and memory subsystems. It abstracts away the low-level device details, represents a deployed program as an execution graph, retains a handful of configurable parameters, and generates latency/throughput estimation for a given traffic profile. It further exposes a couple of extensions to handle multi-tenancy, traffic interleaving, and accelerator peculiarity. We demonstrate the LogNIC model’s capabilities using both commodity SmartNICs and an academic prototype under five application scenarios. Our evaluations show that LogNIC can estimate performance bounds, explore software optimization strategies, and provide guidelines for new hardware designs.
                },
+  pdf       = {logNIC.pdf},
   month     = {{October}},
   year      = 2023,
   selected  = {true}
@@ -30,7 +31,9 @@
                This paper presents LEED, a distributed, replicated, and persistent key-value store over an array of SmartNIC JBOFs. Our key ideas to tackle the unique challenges induced by a SmartNIC JBOF are: trading excessive I/O bandwidth for scarce SmartNIC core computing cycles and memory capacity; making scheduling decisions as early as possible to streamline the request execution flow. LEED systematically revamps the software stack and proposes techniques across per-SSD, intra-JBOF, and inter-JBOF levels. Our prototyped system based on Broadcom Stingray outperforms existing solutions that use beefy server JBOFs and wimpy embedded storage nodes by 4.2×/3.8× and 17.5×/19.1× in terms of requests per Joule for 256B/1KB key-value objects.
                },
   pdf       = {leed.pdf},
+  talk      = {https://www.youtube.com/watch?v=oYJiODfhT50&list=PLU4C2_kotFP2JAkoL6pcgbb52f6GIJJd7&index=54},
   pages     = {1012--1027},
   year      = {2023},
+  month     = {{September}},
   selected  = {true}
 }
