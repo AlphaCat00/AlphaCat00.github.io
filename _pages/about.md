@@ -8,7 +8,8 @@ profile:
   align: right
   image: Portrait_Placeholder.jpg
   image_circular: false # crops the image to make it circular
-  address: This page is under construction.
+  address: 
+  social: true
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
