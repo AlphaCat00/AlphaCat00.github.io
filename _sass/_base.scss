@@ -127,6 +127,12 @@ blockquote {
       margin: 0;
     }
   }
+  
+  .social {
+    .contact-icons {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .profile.float-right {
@@ -161,10 +167,6 @@ blockquote {
       text-decoration: none;
     }
   }
-}
-
-.profile .social .contact-icons {
-  font-size: 1.5rem;
 }
 
 // Navbar customization
