@@ -6,7 +6,7 @@ subtitle: cyrus.guo at wisc.edu
 
 profile:
   align: right
-  image: Portrait_Placeholder.jpg
+  image: portrait.jpg
   image_circular: false # crops the image to make it circular
   address: 
   social: true
