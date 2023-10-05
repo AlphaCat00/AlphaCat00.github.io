@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /assets/pdfs/Zerui_Guo_s__Resume.pdf
+permalink: /assets/pdf/resume.pdf
 title: cv
 description:  
 nav: true
