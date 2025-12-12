@@ -1,39 +1,80 @@
 ---
 ---
 
-@inproceedings{micro23-lognic,
-  abbr      = {MICRO},
-  author    = {Zerui Guo and Jiaxin Lin and Yuebin Bai and Daehyeok Kim and Michael Swift and Aditya Akella and Ming Liu},
-  title     = {LogNIC: A High-Level Performance Model for SmartNICs},
-  booktitle = {Proceedings of 56th IEEE/ACM International Symposium on Microarchitecture},
-  abstract  = {
-               SmartNICs have become an indispensable communication fabric and computing substrate in today’s data centers and enterprise clusters, providing in-network computing capabilities for traversed packets and benefiting a range of applications across the system stack. Building an efficient SmartNIC-assisted solution is generally non-trivial and tedious as it requires programmers to understand the SmartNIC architecture, refactor application logic to match the device’s capabilities and limitations, and correlate an application execution with traffic characteristics. A high-level SmartNIC performance model can decouple the underlying SmartNIC hardware device from its offloaded software implementations and execution contexts, thereby drastically simplifying and facilitating the development process. However, prior architectural models can hardly be applied due to their ineptness in dissecting the SmartNIC-offloaded program’s complexity, capturing the nondeterministic overlapping between computation and I/O, and perceiving diverse traffic profiles.
-               <br/><br/>
-               
-               This paper presents the LogNIC model that systematically analyzes the performance characteristics of a SmartNIC-offloaded program. Unlike conventional execution flow-based modeling, LogNIC employs a packet-centric approach that examines SmartNIC execution based on how packets traverse heterogeneous computing domains, on-/off-chip interconnects, and memory subsystems. It abstracts away the low-level device details, represents a deployed program as an execution graph, retains a handful of configurable parameters, and generates latency/throughput estimation for a given traffic profile. It further exposes a couple of extensions to handle multi-tenancy, traffic interleaving, and accelerator peculiarity. We demonstrate the LogNIC model’s capabilities using both commodity SmartNICs and an academic prototype under five application scenarios. Our evaluations show that LogNIC can estimate performance bounds, explore software optimization strategies, and provide guidelines for new hardware designs.
-               },
-  pdf       = {logNIC.pdf},
-  month     = {{October}},
-  year      = 2023,
-  selected  = {true}
+@inproceedings{memchann-nsdi26,
+    title = {Building A CSFQ-Inspired Transport for Switched CXL Memory Pooling},
+    author = {Guo, Zerui and Shriver, Emily and Liu, Ming},
+    booktitle = {23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 26)},
+    year = {2026},
+    selected = {true},
+    abstract = {<p>Emerging switched CXL memory pooling systems, albeit promising, suffer from significant performance interference due to the shared but performance-uncontrolled data path among concurrent memory streams between a host core and a remote DIMM. We systematically characterize a memory pooling appliance based on the XConn’s Apollo CXL switch, and identify three issues: intra-host contention, in-fabric congestion, and unmanaged host-remote DIMM interaction.</p>
+<p>This paper presents a new transport layer, <strong>MemChannel</strong>, which provides the<code class="rm">mchannel</code> abstraction to manage end-to-end fabric bandwidth among competing memory flows and enable application-specific traffic for switched CXL memory pooling. Under the hood, our key idea is to build a Sender-Driven Fabric-Informed transport protocol--inspired by Core-Stateless Fair Queueing (CSFQ)--that admits just the right amount of CXL requests to each <code class="rm">mchannel</code> based on the estimated <span class="" data-katex-src="Core \leftrightarrow DIMM_{CXL}"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo>↔</mo><mi>D</mi><mi>I</mi><mi>M</mi><msub><mi>M</mi><mrow><mi>C</mi><mi>X</mi><mi>L</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Core \leftrightarrow DIMM_{CXL}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">ore</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">CX</span><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> bandwidth availability. To grapple with the ramifications of CXL-induced idiosyncrasies, MemChannel introduces a couple of techniques: time-based rate control, host-side admission control, cross-host bookkeeping, new congestion signals, rate estimation based on the fluid model, and delay-based link capacity adjustment. We build MemChannel from scratch and support unmodified applications. Our evaluations over switched memory pooling demonstrate the effectiveness of MemChannel from performance isolation, scalability, and multi-tenancy perspectives.</p>
+},
+    abbr = {NSDI},
+}
+
+@inproceedings{pathfinder-sigcomm25,
+    title = {Understanding and Profiling CXL. mem Using PathFinder},
+    author = {Li, Xiao and Guo, Zerui and Bai, Yuebin and Ketkar, Mahesh and Wilkinson, Hugh and Liu, Ming},
+    booktitle = {Proceedings of the ACM SIGCOMM 2025 Conference},
+    pages = {758--779},
+    year = {2025},
+    selected = {true},
+    pdf = {megastation-nsdi25.pdf},
+    abstract = {CXL.mem and the resulting memory pool are promising and gaining great attention. Unlike local memory, CXL DIMMs stay at the I/O subsystem, whose inferior performance can easily impact the processor pipeline and memory subsystem, yielding performance interference, hardware contention, obscure behaviors, and underutilized communication and computing resources. However, our community lacks a tool to understand and profile the CXL.mem protocol execution end-to-end between CPU and remote DIMM.
+ <br/><br/>
+ This paper fills the gap by designing and implementing <b>PathFinder</b>, a systematic, informative, and lightweight CXL.mem profiler. PathFinder leverages the capabilities of existing hardware performance monitors (PMUs) and dissects the CXL.mem protocol at adequate granularities. Our key idea is to view the server processor and its chipset as a multi-stage Clos network, equip each architectural module with a PMU-based telemetry engine, track different CXL.mem paths, and apply conventional traffic analysis techniques. PathFinder performs snapshot-based path-driven profiling and introduces four techniques, i.e., path construction, stall cycle breakdown, interference analyzer, and cross-snapshot analysis. We build PathFinder atop Linux Perf and apply it to seven case studies.
+    },
+    abbr = {SIGCOMM},
 }
 
 
-@inproceedings{sigcomm23-leed,
-  abbr      = {SIGCOMM},
-  title     = {LEED: A Low-Power, Fast Persistent Key-Value Store on SmartNIC JBOFs},
-  author    = {Guo, Zerui and Zhang, Hua and Zhao, Chenxingyu and Bai, Yuebin and Swift, Michael and Liu, Ming},
-  booktitle = {Proceedings of the ACM SIGCOMM 2023 Conference},
-  abstract  = {
-               The recent emergence of low-power high-throughput programmable storage platforms—SmartNIC JBOF (just-a-bunch-of-flash)—motivates us to rethink the cluster architecture and system stack for energy-efficient large-scale data-intensive workloads. Unlike conventional systems that use an array of server JBOFs or embedded storage nodes, the introduction of SmartNIC JBOFs has drastically changed the cluster compute, memory, and I/O configurations. Such an extremely imbalanced architecture makes prior system design philosophies and techniques either ineffective or invalid.
-               <br/><br/>
-               
-               This paper presents LEED, a distributed, replicated, and persistent key-value store over an array of SmartNIC JBOFs. Our key ideas to tackle the unique challenges induced by a SmartNIC JBOF are: trading excessive I/O bandwidth for scarce SmartNIC core computing cycles and memory capacity; making scheduling decisions as early as possible to streamline the request execution flow. LEED systematically revamps the software stack and proposes techniques across per-SSD, intra-JBOF, and inter-JBOF levels. Our prototyped system based on Broadcom Stingray outperforms existing solutions that use beefy server JBOFs and wimpy embedded storage nodes by 4.2×/3.8× and 17.5×/19.1× in terms of requests per Joule for 256B/1KB key-value objects.
+@inproceedings{megastation-nsdi25,
+    title = {Building Massive $\{$MIMO$\}$ Baseband Processing on a $\{$Single-Node$\}$ Supercomputer},
+    author = {Xie, Xincheng and Hou, Wentao and Guo, Zerui and Liu, Ming},
+    booktitle = {22nd USENIX Symposium on Networked Systems Design and Implementation (NSDI 25)},
+    pages = {1221--1242},
+    year = {2025},
+    selected = {true},
+    pdf = {megastation-nsdi25.pdf},
+    abstract = {<p>The rising deployment of massive MIMO coupled with the wide adoption of virtualized radio access networks (vRAN) poses an unprecedented computational demand on the baseband processing, hardly met by existing vRAN hardware substrates. The single-node supercomputer, an emerging computing platform, offers scalable computation and communication capabilities, making it a promising target to hold and run the baseband pipeline. However, realizing this is non-trivial due to the mismatch between (a) the diverse execution granularities and incongruent parallel degrees of different stages along the software processing pipeline and (b) the underlying evolving irregular hardware parallelism at runtime.</p>
+<p>This paper closes the gap by designing and implementing MegaStation–an application-platform co-designed system that effectively harnesses the computing power of a single-node supercomputer for processing massive MIMO baseband. Our key insight is that one can adjust the execution granularity and reconstruct the baseband processing pipeline on the fly based on the monitored hardware parallelism status. Inspired by dynamic instruction scheduling, MegaStation models the single-node supercomputer as a tightly coupled microprocessor and employs a scoreboarding-like algorithm to orchestrate "baseband processing" instructions over GPU-instantiated executors. Our evaluations using the GigaIO FabreX demonstrate that MegaStation achieves up to 66.2% lower tail frame processing latency and 4× higher throughput than state-of-the-art solutions. MegaStation is a scalable and adaptive solution that can meet today’s vRAN requirements.</p>
+},
+    abbr = {NSDI},
+}
+
+
+@inproceedings{lognic-micro23,
+    abbr = {MICRO},
+    author = {Zerui Guo and Jiaxin Lin and Yuebin Bai and Daehyeok Kim and Michael Swift and Aditya Akella and Ming Liu},
+    title = {LogNIC: A High-Level Performance Model for SmartNICs},
+    booktitle = {Proceedings of 56th IEEE/ACM International Symposium on Microarchitecture},
+    abstract = {
+    SmartNICs have become an indispensable communication fabric and computing substrate in today’s data centers and enterprise clusters, providing in-network computing capabilities for traversed packets and benefiting a range of applications across the system stack. Building an efficient SmartNIC-assisted solution is generally non-trivial and tedious as it requires programmers to understand the SmartNIC architecture, refactor application logic to match the device’s capabilities and limitations, and correlate an application execution with traffic characteristics. A high-level SmartNIC performance model can decouple the underlying SmartNIC hardware device from its offloaded software implementations and execution contexts, thereby drastically simplifying and facilitating the development process. However, prior architectural models can hardly be applied due to their ineptness in dissecting the SmartNIC-offloaded program’s complexity, capturing the nondeterministic overlapping between computation and I/O, and perceiving diverse traffic profiles.
+ <br/><br/>
+ This paper presents the LogNIC model that systematically analyzes the performance characteristics of a SmartNIC-offloaded program. Unlike conventional execution flow-based modeling, LogNIC employs a packet-centric approach that examines SmartNIC execution based on how packets traverse heterogeneous computing domains, on-/off-chip interconnects, and memory subsystems. It abstracts away the low-level device details, represents a deployed program as an execution graph, retains a handful of configurable parameters, and generates latency/throughput estimation for a given traffic profile. It further exposes a couple of extensions to handle multi-tenancy, traffic interleaving, and accelerator peculiarity. We demonstrate the LogNIC model’s capabilities using both commodity SmartNICs and an academic prototype under five application scenarios. Our evaluations show that LogNIC can estimate performance bounds, explore software optimization strategies, and provide guidelines for new hardware designs.
                },
-  pdf       = {leed.pdf},
-  talk      = {https://www.youtube.com/watch?v=oYJiODfhT50&list=PLU4C2_kotFP2JAkoL6pcgbb52f6GIJJd7&index=54},
-  pages     = {1012--1027},
-  year      = {2023},
-  month     = {{September}},
-  selected  = {true}
+    pdf = {logNIC.pdf},
+    month = {{October}},
+    year = 2023,
+    selected = {true}
+}
+
+
+@inproceedings{leed-sigcomm23,
+    abbr = {SIGCOMM},
+    title = {LEED: A Low-Power, Fast Persistent Key-Value Store on SmartNIC JBOFs},
+    author = {Guo, Zerui and Zhang, Hua and Zhao, Chenxingyu and Bai, Yuebin and Swift, Michael and Liu, Ming},
+    booktitle = {Proceedings of the ACM SIGCOMM 2023 Conference},
+    abstract = {
+    The recent emergence of low-power high-throughput programmable storage platforms—SmartNIC JBOF (just-a-bunch-of-flash)—motivates us to rethink the cluster architecture and system stack for energy-efficient large-scale data-intensive workloads. Unlike conventional systems that use an array of server JBOFs or embedded storage nodes, the introduction of SmartNIC JBOFs has drastically changed the cluster compute, memory, and I/O configurations. Such an extremely imbalanced architecture makes prior system design philosophies and techniques either ineffective or invalid.
+ <br/><br/>
+ This paper presents LEED, a distributed, replicated, and persistent key-value store over an array of SmartNIC JBOFs. Our key ideas to tackle the unique challenges induced by a SmartNIC JBOF are: trading excessive I/O bandwidth for scarce SmartNIC core computing cycles and memory capacity; making scheduling decisions as early as possible to streamline the request execution flow. LEED systematically revamps the software stack and proposes techniques across per-SSD, intra-JBOF, and inter-JBOF levels. Our prototyped system based on Broadcom Stingray outperforms existing solutions that use beefy server JBOFs and wimpy embedded storage nodes by 4.2×/3.8× and 17.5×/19.1× in terms of requests per Joule for 256B/1KB key-value objects.
+               },
+    pdf = {leed.pdf},
+    talk = {https://www.youtube.com/watch?v=oYJiODfhT50&list=PLU4C2_kotFP2JAkoL6pcgbb52f6GIJJd7&index=54},
+    pages = {1012--1027},
+    year = {2023},
+    month = {{September}},
+    selected = {true}
 }
