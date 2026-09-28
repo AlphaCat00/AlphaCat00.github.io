@@ -119,6 +119,8 @@
         {%- else -%}
           {%- capture entrytype -%}{%- endcapture -%}
         {%- endif -%}
+        {%- assign entrymonth = '' -%}
+        {%- assign entryyear = '' -%}
         {%- if entry.month -%}
           {%- capture entrymonth -%}{{ " " }}{{ entry.month | capitalize }}{%- endcapture -%}
         {%- endif -%}
@@ -149,11 +151,7 @@
             <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
           {%- endif %}
           {%- if entry.pdf %}
-            {% if entry.pdf contains '://' -%}
-            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            {%- else -%}
             <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            {%- endif %}
           {%- endif %}
           {%- if entry.supp %}
             {% if entry.supp contains '://' -%}
@@ -220,7 +218,7 @@
           {% if entry.abstract -%}
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
-            <p>{{ entry.abstract }}</p>
+            {{ entry.abstract }}
           </div>
           {%- endif -%}
 

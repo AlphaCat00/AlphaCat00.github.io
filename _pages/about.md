@@ -18,7 +18,10 @@ social: false  # includes social icons at the bottom of the page
 
 ---
 
-Hi there! I am Zerui (Cyrus) Guo, a PhD student at [the University of Wisconsin-Madison](https://www.cs.wisc.edu/) advised by [Prof. Ming Liu](https://pages.cs.wisc.edu/~mgliu/index.html).  Previously, I obtained my master's degree from Beihang University, and my bachelor's degree from Beijing University of Posts and Telecommunications.
+I am Zerui (Cyrus) Guo, a final-year Ph.D. student in computer science at [the University of Wisconsin-Madison](https://www.cs.wisc.edu/), advised by [Prof. Ming Liu](https://pages.cs.wisc.edu/~mgliu/index.html). I expect to graduate in May 2027. Previously, I received my master's degree from Beihang University and my bachelor's degree from Beijing University of Posts and Telecommunications.
 
-My research goal is to bridge the gap between emerging hardware and networked system software. Currently, I mainly focus on smartNIC-assisted computing, such as KV stores, smartNIC models, and game streaming, as well as memory fabrics (CXL.mem).
+I build **efficient and predictable networked systems** through performance modeling, hardware-aware design, and adaptive scheduling and control. My work spans SmartNIC-based storage and performance modeling, CXL memory profiling and pooling, and accelerated application pipelines. Across these systems, I study how to understand hardware bottlenecks, align execution with hardware capabilities, and control contention among shared resources.
 
+**Research interests:** Hardware-Aware Networked Systems; Performance Engineering; Disaggregated Computing.
+
+[Download my CV (PDF)]({{ '/assets/pdf/resume.pdf' | relative_url }}) · [All publications]({{ '/publications/' | relative_url }})
