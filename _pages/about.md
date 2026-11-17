@@ -19,10 +19,9 @@ social: false  # includes social icons at the bottom of the page
 
 ---
 
-I am Zerui (Cyrus) Guo, a final-year Ph.D. student in computer science at [the University of Wisconsin-Madison](https://www.cs.wisc.edu/), advised by [Prof. Ming Liu](https://pages.cs.wisc.edu/~mgliu/index.html). I expect to graduate in May 2027. Previously, I received my master's degree from Beihang University and my bachelor's degree from Beijing University of Posts and Telecommunications.
+I am Zerui (Cyrus) Guo, a final-year Ph.D. candidate in computer science at [the University of Wisconsin-Madison](https://www.cs.wisc.edu/), advised by [Prof. Ming Liu](https://pages.cs.wisc.edu/~mgliu/index.html). I build **storage, networking, and GPU infrastructure** that coordinates application demand with shared hardware. My research covers SmartNIC-based storage, memory pooling over CXL, and GPU scheduling for real-time video pipelines, with a focus on congestion and flow control for pooled datacenter resources.
 
-I build **efficient and predictable networked systems** through performance modeling, hardware-aware design, and adaptive scheduling and control. My research spans SmartNIC-based storage and performance modeling, CXL memory profiling, and memory pooling. Across these systems, I study how to identify hardware bottlenecks, align execution with hardware capabilities, and control contention among shared resources.
+I also built and now maintain the storage cluster for [EFabric](https://efabric.cs.wisc.edu/), an AI-for-science computing platform at UW–Madison serving hundreds of users.
 
-Alongside my research, I built and now maintain the storage cluster for [EFabric](https://efabric.cs.wisc.edu/), an AI-for-science computing platform at UW–Madison serving hundreds of users.
-
+**I am on the job market** for full-time infrastructure roles and expect to graduate in February 2027. Please reach out if you think there is a fit.<br>
 [Download my CV (PDF)]({{ '/assets/pdf/resume.pdf' | relative_url }}) · [All publications]({{ '/publications/' | relative_url }})
